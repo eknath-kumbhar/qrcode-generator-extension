@@ -1,0 +1,20 @@
+{
+    "name": "QR Code Generator",
+    "author": "Eknath Kumbhar",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "This is a Chrome Extension to generate QR Code of current page being viewed by user",
+    "action": {
+        "default_title": "QR Code Generator",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "128": "logo/qr-code-generator-128px.png",
+        "64": "logo/qr-code-generator-64px.png",
+        "48": "logo/qr-code-generator-48px.png",
+        "24": "logo/qr-code-generator-24px.png"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
