@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  padding: 0px;
+  font-size: 16px;
+}
+body {
+  padding: 8px;
+  width: 250px;
+}
+
+.qr-container {
+  padding: 1rem 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+}
+
+#url-input {
+  flex: 1;
+  margin-right: 4px;
+}
+
+#qr-code {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+  border: 0;
+  background-color: #ffab2d;
+  border-radius: 3px;
+  font-weight: bold;
+}
+button[type="submit"]:hover{
+  background-color: #ffab2ddd;
+}
