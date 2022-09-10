@@ -15,20 +15,22 @@
 
 <body>
     <header>
-        <form id="qr-form">
-            <section class="d-flex-column">
-                <label for="url-input"><b>Source URL</b></label>
-                <div class="d-flex">
-                    <input type="text" placeholder="Enter here" id="url-input" value="" required/>
-                    <button type="submit">Get QR</button>
-                </div>
-            </section>
-        </form>
+        <section class="d-flex-column">
+            <div class="d-flex">
+                <label for="url-input"><b>Scan QR Code</b></label>
+                <span id="close-btn">&#10006;</span>
+            </div>
+            <div class="d-flex">
+                <input type="text" placeholder="Enter here" id="url-input" value="" required />
+            </div>
+        </section>
     </header>
-    <main class="qr-container d-flex-column">
+    <main class="qr-container">
         <div id="qr-code"></div>
+        <button type="button" id="download">Download</button>
     </main>
-    <script src="qrcode.min.js" type="text/javascript"></script>
+<!--     <script src="qrcode.min.js" type="text/javascript"></script> -->
+    <script src="qr-code-styling.js" type="text/javascript"></script>
     <script src="script.js" type="text/javascript"></script>
 </body>
 

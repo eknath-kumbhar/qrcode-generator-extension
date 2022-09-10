@@ -1,3 +1,9 @@
+:root {
+  --primary-color_rgb: 255, 171, 45;
+  --alpha: 0.87;
+  --text-color: #404040;
+}
+
 html,
 body {
   margin: 0;
@@ -5,12 +11,13 @@ body {
   font-size: 16px;
 }
 body {
-  padding: 8px;
+  padding: 0.5rem;
   width: 250px;
+  color: var(--text-color);
 }
 
 .qr-container {
-  padding: 1rem 0;
+  text-align: center;
 }
 
 .d-flex {
@@ -23,28 +30,35 @@ body {
 }
 
 label {
-  margin-bottom: 4px;
-  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  margin-right: auto;
 }
 
 #url-input {
   flex: 1;
-  margin-right: 4px;
+  padding: 2px;
 }
 
 #qr-code {
-  margin: auto;
-  width: 200px;
-  height: 200px;
+  margin: 0 auto;
 }
 
-button[type="submit"] {
+button {
   cursor: pointer;
   border: 0;
-  background-color: #ffab2d;
-  border-radius: 3px;
+  background-color: rgb(var(--primary-color_rgb));
+  border-radius: 4px;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
 }
-button[type="submit"]:hover{
-  background-color: #ffab2ddd;
+
+button:hover {
+  background-color: rgba(var(--primary-color_rgb), var(--alpha));
+}
+
+#close-btn{
+  cursor: pointer;
+  line-height: 1rem;
+  padding: 5px;
 }
