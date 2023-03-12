@@ -1,25 +1,16 @@
-:root {
-  --primary-color: #fff;
-  --secondary-color: #000;
-}
-
 html,
 body {
   margin: 0;
   padding: 0px;
-  width: 280px;
+  font-size: 16px;
+}
+body {
+  padding: 8px;
+  width: 250px;
 }
 
-.container {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 12px;
-}
-
-#qr-code {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+.qr-container {
+  padding: 1rem 0;
 }
 
 .d-flex {
@@ -27,50 +18,33 @@ body {
 }
 
 .d-flex-column {
+  display: flex;
   flex-direction: column;
 }
 
-.title {
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
 label {
-  margin-right: auto;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
 }
 
-#url {
+#url-input {
   flex: 1;
-  padding: 2px;
+  margin-right: 4px;
 }
 
 #qr-code {
-  margin: 12px auto;
+  margin: auto;
+  width: 200px;
+  height: 200px;
 }
 
-#download {
-  background-color: var(--secondary-color);
+button[type="submit"] {
+  cursor: pointer;
   border: 0;
-  border-radius: 4px;
-  color: var(--primary-color);
-  cursor: pointer;
+  background-color: #ffab2d;
+  border-radius: 3px;
   font-weight: bold;
-  padding: 6px 12px;
 }
-
-#close-btn {
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 5px;
-}
-
-#close-btn rect {
-  fill: var(--secondary-color);
-}
-
-footer {
-  display: flex;
-  place-content: end;
+button[type="submit"]:hover{
+  background-color: #ffab2ddd;
 }
