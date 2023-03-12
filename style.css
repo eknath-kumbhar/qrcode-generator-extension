@@ -1,23 +1,25 @@
 :root {
-  --primary-color_rgb: 255, 171, 45;
-  --alpha: 0.87;
-  --text-color: #404040;
+  --primary-color: #fff;
+  --secondary-color: #000;
 }
 
 html,
 body {
   margin: 0;
   padding: 0px;
-  font-size: 16px;
-}
-body {
-  padding: 0.5rem;
-  width: 250px;
-  color: var(--text-color);
+  width: 280px;
 }
 
-.qr-container {
-  text-align: center;
+.container {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 12px;
+}
+
+#qr-code {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .d-flex {
@@ -25,40 +27,50 @@ body {
 }
 
 .d-flex-column {
-  display: flex;
   flex-direction: column;
 }
 
+.title {
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
 label {
-  margin-bottom: 0.5rem;
   margin-right: auto;
 }
 
-#url-input {
+#url {
   flex: 1;
   padding: 2px;
 }
 
 #qr-code {
-  margin: 0 auto;
+  margin: 12px auto;
 }
 
-button {
-  cursor: pointer;
+#download {
+  background-color: var(--secondary-color);
   border: 0;
-  background-color: rgb(var(--primary-color_rgb));
   border-radius: 4px;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  color: var(--text-color);
-}
-
-button:hover {
-  background-color: rgba(var(--primary-color_rgb), var(--alpha));
-}
-
-#close-btn{
+  color: var(--primary-color);
   cursor: pointer;
-  line-height: 1rem;
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+#close-btn {
+  border-radius: 4px;
+  cursor: pointer;
   padding: 5px;
+}
+
+#close-btn rect {
+  fill: var(--secondary-color);
+}
+
+footer {
+  display: flex;
+  place-content: end;
 }

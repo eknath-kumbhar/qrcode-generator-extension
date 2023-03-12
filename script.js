@@ -1,11 +1,12 @@
 var QRCodeStyling;
+const urlFieldId = 'url'
 
-const urlInput = document.getElementById('url-input');
+const urlInput = document.getElementById(urlFieldId);
 const qrCodeContainer = document.getElementById('qr-code');
 let qrCode;
 
 function getCurrentPageUrl() {
-    chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
+    chrome.tabs && chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
         const activeTab = tabs[0] || {};
         activeTab.hasOwnProperty('url') ? setInputValue(tabs[0].url) : '';
     });
@@ -19,26 +20,21 @@ function setInputValue(url) {
 function renderQrCode(url) {
     qrCode = '';
     qrCode = new QRCodeStyling({
-        width: 200,
-        height: 200,
-        data: url,
+        width: 232,
+        height: 232,
         margin: 5,
-        qrOptions: {
-            typeNumber: '0',
-            mode: 'Byte',
-            errorCorrectionLevel: 'Q'
-        },
+        data: url,
         dotsOptions: {
-            type: 'extra-rounded',
+            type: 'extra-rounded'
         },
         cornersSquareOptions: {
-            type: 'dot'
+            type: 'extra-rounded'
         },
         cornersDotOptions: {
-            type: 'dot'
+            type: 'extra-rounded'
         },
     });
-
+    qrCodeContainer.innerHTML = '';
     qrCode.append(qrCodeContainer);
 }
 
@@ -48,7 +44,7 @@ function download() {
 
 getCurrentPageUrl();
 
-document.querySelector('#url-input').addEventListener('change', (e) => {
+document.querySelector(`#${urlFieldId}`).addEventListener('change', (e) => {
     renderQrCode(urlInput.value);
 });
 
